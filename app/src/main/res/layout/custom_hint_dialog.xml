@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for the instructions pop up dialog
+
+Jenna
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:padding="15dp">
+
+    <!-- title for the alert dialog-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_dialog"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Game Instructions:"
+        android:gravity="center_horizontal"
+        />
+
+    <!-- message for the alert dialog -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:layout_below="@+id/title_dialog"
+        android:id="@+id/message_dialog"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="1. Click Start Game to set up your game. There you can choose image category, grid size and game mode.\n\n2. After you’ve chosen your settings, just click Play!\n\n3. Once the game starts, you’ll get a short preview of the board. After the tiles flip over, get started finding the patching pairs.\n\nHave fun playing!"
+        />
+
+    <!-- Button to close the alert box -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_dialog"
+        android:id="@+id/btn_dialog"
+        android:text="Got it!"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/StartGame"
+        android:layout_centerHorizontal="true"
+
+        />
+
+</RelativeLayout>

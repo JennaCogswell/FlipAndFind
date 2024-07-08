@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for the end of game pop up dialog
+
+Jenna
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:padding="15dp"
+    >
+
+    <!-- Title for the alert box-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_alert"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Game Solved!"
+        android:gravity="center_horizontal"
+        />
+
+    <!-- message for the alert box -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:layout_below="@+id/title_alert"
+        android:id="@+id/message_alert"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="Congratulations! You found all the matches."
+        android:gravity="center_horizontal"
+        />
+
+    <!-- Buttons for main menu or new game (to settings page) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_alert"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/menu_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Main menu"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/teal_200"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/new_alert"
+            android:text="New Game!"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/StartGame"
+            android:layout_centerHorizontal="true"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

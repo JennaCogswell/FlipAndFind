@@ -1,0 +1,15 @@
+circle
+diamond
+heptagon
+hexagon
+nonagon
+octagon
+oval
+parallelogram
+pentagon
+rectangle
+semicircle
+square
+star
+trapezoid
+triangle

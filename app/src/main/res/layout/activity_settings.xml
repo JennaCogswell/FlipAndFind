@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for settings activity
+
+ Jenna
+    Made all text view and buttons
+    Styled (design/colors/layout)
+    restyled radio buttons using selectors
+
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_Activity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Settings">
+
+    <!-- Back button to go back to main page -->
+    <ImageButton
+        android:id="@+id/buttonMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:backgroundTint="@color/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.015"
+        app:layout_constraintHorizontal_bias="0" />
+
+    <!-- Page title -->
+    <TextView
+        android:id="@+id/chooseText"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <!-- Background music mute button -->
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/muteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="mute background music"
+        android:src="@drawable/baseline_music_note_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintVertical_bias="0.028"
+        android:backgroundTint="@color/background"/>
+
+    <!-- Category title -->
+    <TextView
+        android:id="@+id/categoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/white"
+        android:text="Category of Images"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"/>
+
+    <!-- Radio Group for selecting the category of images
+     Buttons styled using radio_style.xml selector and radio_selected.xml or radio_unselected.xml
+     -->
+    <RadioGroup
+        android:id="@+id/choose_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26">
+
+        <RadioButton
+            android:id="@+id/animal_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_margin="7dp"
+            android:padding="5dp"
+            android:textColor="@color/radio_textselect"
+            android:checked="false"
+            android:text="Animals"
+            android:button="@color/background"
+            android:textSize="18sp"
+            android:background="@drawable/radio_style"/>
+
+        <RadioButton
+            android:id="@+id/fruits_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/radio_textselect"
+            android:checked="true"
+            android:text="Fruits"
+            android:textSize="18sp"
+            android:button="@color/background"
+            android:gravity="center"
+            android:background="@drawable/radio_style"/>
+
+        <RadioButton
+            android:id="@+id/shapes_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_margin="7dp"
+            android:checked="false"
+            android:textColor="@color/radio_textselect"
+            android:text="Shapes"
+            android:textSize="18sp"
+            android:button="@color/background"
+            android:gravity="center"
+            android:background="@drawable/radio_style"/>
+    </RadioGroup>
+
+    <!-- Grid size title -->
+    <TextView
+        android:id="@+id/gridText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Grid Size"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"/>
+
+    <!-- Radio Group for selecting the grid size
+    Buttons styled using radio_style.xml selector and radio_selected.xml or radio_unselected.xml
+    -->
+    <RadioGroup
+        android:id="@+id/choose_gridsize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51">
+
+        <RadioButton
+            android:id="@+id/size_34"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_margin="7dp"
+            android:textColor="@color/radio_textselect"
+            android:checked="false"
+            android:text="Small"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:button="@color/background"
+            android:background="@drawable/radio_style"/>
+
+        <RadioButton
+            android:id="@+id/size_44"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:checked="true"
+            android:textColor="@color/radio_textselect"
+            android:text="Medium"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:button="@color/background"
+            android:background="@drawable/radio_style"/>
+
+        <RadioButton
+            android:id="@+id/size_45"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_margin="7dp"
+            android:checked="false"
+            android:textColor="@color/radio_textselect"
+            android:text="Large"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:button="@color/background"
+            android:background="@drawable/radio_style"/>
+    </RadioGroup>
+
+    <!-- Mode title-->
+    <TextView
+        android:id="@+id/modeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game mode"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <!-- Radio Group for selecting the game mode
+    Buttons styled using radio_style.xml selector and radio_selected.xml or radio_unselected.xml
+    -->
+    <RadioGroup
+        android:id="@+id/choose_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.755">
+
+        <RadioButton
+            android:id="@+id/timed_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_margin="7dp"
+            android:checked="false"
+            android:textColor="@color/radio_textselect"
+            android:text="Timed"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@drawable/radio_style"
+            android:button="@color/background"/>
+
+        <RadioButton
+            android:id="@+id/moves_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:checked="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/radio_textselect"
+            android:text="Count\nFlips"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@drawable/radio_style"
+            android:button="@color/background"/>
+
+        <RadioButton
+            android:id="@+id/free_mode"
+            android:layout_width="0dp"
+            android:checked="false"
+            android:textColor="@color/radio_textselect"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_margin="7dp"
+            android:text="Practice"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@drawable/radio_style"
+            android:button="@color/background"/>
+    </RadioGroup>
+
+    <!-- Button for starting the game activity-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Play!"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/StartGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.92"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

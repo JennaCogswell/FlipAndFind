@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App manifest file -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
+    <!-- Created our own appicon.png and set it here -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FlipAndFind"
+        tools:targetApi="31">
+
+        <!-- Main activity - to be launched upon startup -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Settings activity - to be launched after main activity -->
+        <activity
+            android:name=".Settings"
+            android:exported="false">
+        </activity>
+
+        <!-- Game activity - to be launched after settings chosen -->
+        <activity
+            android:name=".GameActivity1"
+            android:exported="false"
+            android:hardwareAccelerated="false">
+        </activity>
+        <activity
+            android:name=".GameActivity2"
+            android:exported="false"
+            android:hardwareAccelerated="false">
+        </activity>
+        <activity
+            android:name=".GameActivity3"
+            android:exported="false"
+            android:hardwareAccelerated="false">
+        </activity>
+
+    </application>
+
+</manifest>
